@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction()
-                .replace(R.id.frameLayout, FragmentMain())
-                .commit()
+            .replace(R.id.frameLayoutMain, FragmentMain())
+            .commit()
     }
 }

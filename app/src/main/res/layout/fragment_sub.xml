@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:padding="32dp"
-        android:background="#DFDFDF">
+        android:background="#EAEAEA">
 
         <TextView
             android:id="@+id/textView"
@@ -30,8 +29,7 @@
             android:layout_marginBottom="32dp"
             android:gravity="center_horizontal"
             android:hint="@string/input_something"
-            android:autofillHints="@string/input_something"
-            android:inputType="text" />
+            android:autofillHints="@string/input_something" />
 
         <Button
             android:id="@+id/button"
@@ -39,10 +37,6 @@
             android:layout_height="wrap_content"
             android:text="@{buttonText}"
             tools:text="@string/ok" />
-
-        <include
-            android:id="@+id/frameLayoutSub"
-            layout="@layout/fragment_sub" />
 
     </LinearLayout>
 </layout>
