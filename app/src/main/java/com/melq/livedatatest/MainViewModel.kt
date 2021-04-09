@@ -18,7 +18,7 @@ class MainViewModel {
 
     private val _submittedText: MutableLiveData<String> =
             MutableLiveData<String>().also { mutableLiveData ->
-                mutableLiveData.value = R.string.output_here.toString()
+                mutableLiveData.value = "ここに出力されます" // ほんとはgetStringしたい
             }
     val submittedText: LiveData<String> get() = _submittedText
 
