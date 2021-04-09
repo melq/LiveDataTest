@@ -22,5 +22,15 @@ class MainViewModel {
             }
     val submittedText: LiveData<String> get() = _submittedText
 
-    
+    fun updateButton(isBlank: Boolean) {
+        _isEnabled.value = !isBlank
+
+        _buttonText.value =
+                if (isBlank) "NO!!"
+                else "OK!!"
+    }
+
+    fun submitText(text: String) {
+        _submittedText.value = text
+    }
 }
