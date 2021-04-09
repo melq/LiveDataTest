@@ -4,8 +4,8 @@
 
     <data>
         <variable
-            name="buttonText"
-            type="String" />
+            name="vm"
+            type="com.melq.livedatatest.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -20,7 +20,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/output_here" />
+            android:text="@{vm.submittedText" />
 
         <EditText
             android:id="@+id/editText"
@@ -37,7 +37,8 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{buttonText}"
+            android:enabled="@{vm.isEnabled}"
+            android:text="@{vm.buttonText}"
             tools:text="@string/ok" />
 
         <include
