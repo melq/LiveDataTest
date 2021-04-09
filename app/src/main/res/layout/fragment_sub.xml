@@ -4,8 +4,8 @@
 
     <data>
         <variable
-            name="buttonText"
-            type="String" />
+            name="vm"
+            type="com.melq.livedatatest.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/output_here" />
+            android:text="@{vm.submittedTextSub}" />
 
         <EditText
             android:id="@+id/editText"
@@ -29,13 +29,15 @@
             android:layout_marginBottom="32dp"
             android:gravity="center_horizontal"
             android:hint="@string/input_something"
-            android:autofillHints="@string/input_something" />
+            android:autofillHints="@string/input_something"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{buttonText}"
+            android:enabled="@{vm.isEnabledSub}"
+            android:text="@{vm.buttonTextSub}"
             tools:text="@string/ok" />
 
     </LinearLayout>

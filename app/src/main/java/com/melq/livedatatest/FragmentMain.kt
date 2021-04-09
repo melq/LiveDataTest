@@ -31,9 +31,20 @@ class FragmentMain : Fragment() {
         binding.button.setOnClickListener {
             viewModel.submitText(binding.editText.text.toString())
         }
+        binding.frameLayoutSub.button.setOnClickListener {
+            viewModel.submitTextSub(binding.frameLayoutSub.editText.text.toString())
+        }
+
+//        viewModel.updateButtonでやっているが、例として
+//        viewModel.isEnabled.observe(viewLifecycleOwner, Observer { isEnabled ->
+//            binding.button.isEnabled = isEnabled
+//        })
 
         binding.editText.addTextChangedListener { text ->
             viewModel.updateButton(text.isNullOrBlank())
+        }
+        binding.frameLayoutSub.editText.addTextChangedListener { text ->
+            viewModel.updateButtonSub(text.isNullOrBlank())
         }
     }
 }
